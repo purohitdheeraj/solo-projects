@@ -100,6 +100,9 @@ const pw2 = document.querySelector(".password-2");
 const loader = document.querySelector(".loading");
 const submitForm = document.querySelector(".form-submit");
 const inputLength = document.querySelector(".input-length");
+const toolTip1 = document.querySelector(".tooltip-1");
+const toolTip2 = document.querySelector(".tooltip-2");
+const clearData = document.querySelector(".clear-data");
 
 // global states (accessible across js file)
 let passwordLength = 6;
@@ -165,6 +168,12 @@ function showLoader() {
 	} else {
 		loader.classList.remove("show-loader");
 	}
+}
+
+function clipboardTimeout(tooltip) {
+	setTimeout(function () {
+		tooltip.textContent = "Copy to Clipboard";
+	}, 5000);
 }
 
 // filter main characters array
@@ -251,15 +260,39 @@ function getRandomPassword(passLength) {
 }
 
 // click to copy
-let toolTip1 = document.querySelector(".tooltip-1");
-let toolTip2 = document.querySelector(".tooltip-2");
-
+// * bug promise error
 pw1.addEventListener("click", function () {
-	navigator.clipboard.writeText(pw1.textContent);
+	
+	// bug - promise error
+	// navigator.clipboard.writeText(pw1.textContent);
+	
+	// workaround
+	textToClipboard(pw1.textContent)
+		
 	toolTip1.textContent = "Copied!";
+	clipboardTimeout(toolTip1);
 });
 
 pw2.addEventListener("click", function () {
-	navigator.clipboard.writeText(pw2.textContent);
+	textToClipboard(pw2.textContent)
 	toolTip2.textContent = "Copied!";
+	clipboardTimeout(toolTip2);
+});
+
+
+function textToClipboard(text) {
+    let dummy = document.createElement("textarea");
+    document.body.appendChild(dummy);
+    dummy.value = text;
+    dummy.select();
+    document.execCommand("copy");
+    document.body.removeChild(dummy);
+}
+// clear data
+clearData.addEventListener("click", function () {
+	pw1.textContent = "";
+	pw2.textContent = "";
+	inputLength.value = null;
+	toolTip1.textContent = "Copy to Clipboard";
+	toolTip2.textContent = "Copy to Clipboard";
 });
