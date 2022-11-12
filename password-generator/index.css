@@ -123,3 +123,22 @@ body {
 .input-length-wrapper > * {
 	margin: 4px;
 }
+
+.tooltip {
+	position: relative;
+}
+
+.tooltip-text {
+	position: absolute;
+	background: var(--BG-LIGHT);
+	color: var(--BG-DARK-BLUR);
+	bottom: 100%;
+	border-radius: 5px;
+	padding: 4px;
+	margin-bottom: 8px;
+	visibility: hidden;
+}
+
+.tooltip:hover .tooltip-text {
+	visibility: visible;
+}

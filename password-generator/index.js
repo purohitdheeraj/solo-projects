@@ -95,22 +95,19 @@ const characters = [
 
 // elements
 const btnEl = document.querySelector(".btn-cta");
-const passE1 = document.querySelector(".password-one");
-const passE2 = document.querySelector(".password-two");
+const pw1 = document.querySelector(".password-1");
+const pw2 = document.querySelector(".password-2");
 const loader = document.querySelector(".loading");
 const submitForm = document.querySelector(".form-submit");
 const inputLength = document.querySelector(".input-length");
 
-// global variables
+// global states (accessible across js file)
 let passwordLength = 6;
-
-// States
-let loading = false;
-
-// filter states
 let includeNumbers = true;
 let includeSymbols = true;
 
+// States
+let loading = false;
 
 // filter element
 const numberFilter = document.getElementById(
@@ -120,18 +117,16 @@ const symbolFilter = document.getElementById(
 	"filter-symbols"
 );
 
-
 // checkbox events
+//  * setter functions for inputs
+
 numberFilter.addEventListener("change", function (e) {
 	includeNumbers = e.target.checked;
-	// console.log(includeNumbers);
 });
 
 symbolFilter.addEventListener("change", function (e) {
 	includeSymbols = e.target.checked;
-	// console.log(includeSymbols);
 });
-
 
 // onchange event
 inputLength.addEventListener("change", function (e) {
@@ -153,8 +148,8 @@ submitForm.addEventListener("submit", function (e) {
 	setTimeout(function () {
 		loading = false;
 		showLoader();
-		passE1.textContent = randomPasswordOne;
-		passE2.textContent = randomPasswordTwo;
+		pw1.textContent = randomPasswordOne;
+		pw2.textContent = randomPasswordTwo;
 	}, 2000);
 });
 
@@ -254,3 +249,17 @@ function getRandomPassword(passLength) {
 	}
 	return newPassword;
 }
+
+// click to copy
+let toolTip1 = document.querySelector(".tooltip-1");
+let toolTip2 = document.querySelector(".tooltip-2");
+
+pw1.addEventListener("click", function () {
+	navigator.clipboard.writeText(pw1.textContent);
+	toolTip1.textContent = "Copied!";
+});
+
+pw2.addEventListener("click", function () {
+	navigator.clipboard.writeText(pw2.textContent);
+	toolTip2.textContent = "Copied!";
+});
