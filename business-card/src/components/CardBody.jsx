@@ -5,9 +5,13 @@ const CardBody = () => {
 	return (
 		<main className="card__main">
 			<div className="card__main--intro">
-				<h1>Laura Smith</h1>
+				<h2>Dheeraj Purohit</h2>
 				<h3>Frontend Developer</h3>
-				<small>@laurasmith.website</small>
+				<small className="card__main--intro-portfolio">
+					<a href="https://dheeraj-purohit-portfolio.netlify.app">
+						@dheeraj-purohit-portfolio
+					</a>
+				</small>
 			</div>
 
 			<button className="btn btn--cta">
@@ -18,23 +22,19 @@ const CardBody = () => {
 			</button>
 
 			<div className="card__main--info">
-				
-        <h2>About</h2>
+				<h2>About</h2>
 				<p>
-					I am a frontend developer with a
-					particular interest in making things
-					simple and automating daily tasks. I try
-					to keep up with security and best
-					practices, and am always looking for new
-					things to learn.
+					Hare Krishna🙏💖 I am passionate about
+					web development and have experience
+					working with technologies like Html,
+					Css, JavaScript, ReactJs, Sql, Figma
 				</p>
-				
-        <h2>Interests</h2>
+
+				<h2>Interests</h2>
 				<p>
-					Food expert. Music scholar. Reader.
-					Internet fanatic. Bacon buff.
-					Entrepreneur. Travel geek. Pop culture
-					ninja. Coffee fanatic.
+					Chanting Hare Krishna, Devotional
+					Service , Yoga, Martial Art Enthusiast,
+					Devotional Songs(Kirtan-Bhajan)
 				</p>
 			</div>
 		</main>

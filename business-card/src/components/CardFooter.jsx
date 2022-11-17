@@ -10,7 +10,7 @@ const Footer = () => {
 		<footer className="card__footer">
 			<ul className="card__footer--icons">
 				<li className="icon">
-					<a href="facebook.com">
+					<a href="https://www.facebook.com/dheeraj.purohit.942">
 						<img
 							src={facebookIcon}
 							alt="facebook "
@@ -19,7 +19,7 @@ const Footer = () => {
 				</li>
 
 				<li className="icon">
-					<a href="github.com">
+					<a href="https://github.com/purohitdheeraj">
 						<img
 							src={githubIcon}
 							alt="github"
@@ -28,7 +28,7 @@ const Footer = () => {
 				</li>
 
 				<li className="icon">
-					<a href="instagram.com">
+					<a href="https://www.instagram.com/theindianyoga/">
 						<img
 							src={instagramIcon}
 							alt="instagram"
@@ -37,7 +37,7 @@ const Footer = () => {
 				</li>
 
 				<li className="icon">
-					<a href="linkedin.com">
+					<a href="https://www.linkedin.com/in/dheeraj-purohit-79ba4a168/">
 						<img
 							src={linkedInIcon}
 							alt="linkedIn"
@@ -46,7 +46,7 @@ const Footer = () => {
 				</li>
 
 				<li className="icon">
-					<a href="">
+					<a href="https://twitter.com/the_indianyoga">
 						<img
 							src={twitterIcon}
 							alt="twitter"

@@ -1,17 +1,51 @@
+:root {
+	font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+	font-size: 16px;
+	line-height: 24px;
+	font-weight: 400;
+	color-scheme: light dark;
+
+	/* 
+	@color
+		W-White
+		BL-Black
+	*/
+
+	/* Backup Bg and font-color */
+	--FONT-COLOR-W: rgba(245, 245, 245, 1);
+	--BG-COLOR-BL: rgba(24, 24, 24, 1);
+
+	/*
+		@L - Light
+		@M- Medium
+		@D- Dark
+	*/
+
+	/* Background Colors */
+	--BG-BLACK-L: rgba(35, 37, 44, 1);
+	--BG-BLACK-M: rgba(26, 27, 33, 1);
+	--BG-BLACK-D: rgba(22, 22, 25, 1);
+
+	/* BUTTON  */
+	--BG-BTN-W: rgba(255, 255, 255, 1);
+	--BG-FONT-BL: rgba(37, 41, 51, 1);
+
+	/* title-subtitle */
+	--FONT-COLOR-YD: rgba(243, 191, 153, 1);
+
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-text-size-adjust: 100%;
+}
+
 * {
 	box-sizing: border-box;
 	margin: 0;
 }
 
-/* flex-container */
-
-.container {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-}
-
-/* container */
+/* Outer most container */
 #root {
 	max-width: 1280px;
 	margin: 0 auto;
@@ -25,18 +59,21 @@
 	margin: inherit;
 	border-radius: 10px;
 	padding: 44px 116px;
-	background: rgba(35, 37, 44, 1);
+	background: var(--BG-BLACK-L);
 }
 
 .card {
-	margin: 0 auto;
 	max-width: 316px;
 }
 
 .card__img {
-	background: url("./assets/card-img.png");
+	background: url("./assets/dheeraj-profile.jpg");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
 	max-width: 100%;
 	min-height: 317px;
+	border-radius: 10px 10px 0 0;
 }
 
 .card__main {
@@ -44,21 +81,28 @@
 	text-align: center;
 	display: flex;
 	flex-direction: column;
-	background: rgba(26, 27, 33, 1);
+	background: var(--BG-BLACK-M);
 }
 
 .card__main--intro {
 	padding: 8px;
 }
 
-.card__main--intro h1 {
-	font-size: 25x;
+.card__main--intro h2 {
 	line-height: 30px;
+}
+
+.card__main--intro-portfolio a {
+	color: var(--FONT-COLOR-W);
+}
+
+.card__main--intro-portfolio a:hover {
+	color: var(--FONT-COLOR-YD);
 }
 
 .card__main--intro h3 {
 	font-weight: 400;
-	color: rgba(243, 191, 153, 1);
+	color: var(--FONT-COLOR-YD);
 	margin-top: 6px;
 }
 
@@ -71,14 +115,13 @@
 /* used simple className for btn */
 .btn {
 	max-width: 100%;
-	background: #fff;
+	background: var(--BG-BTN-W);
 	margin-top: 16px;
 	padding: 12px 96px;
 	border-radius: 6px;
 	cursor: pointer;
-	color: #374151;
+	color: var(--BG-FONT-BL);
 	border: none;
-	box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
 	font-size: 14px;
 	display: flex;
 	justify-content: center;
@@ -99,13 +142,14 @@
 .card__main--info p {
 	margin-top: 5px;
 	margin-bottom: 24px;
-	font-size: 10px;
+	font-size: 12px;
+	text-align: justify;
 	line-height: 16px;
 }
 
 /* footer */
 .card__footer {
-	background: rgba(22, 22, 25, 1);
+	background: var(--BG-BLACK-D);
 	padding: 20px 48px;
 	border-radius: 0 0 10px 10px;
 }
@@ -113,8 +157,16 @@
 /* list-wrapper */
 .card__footer--icons {
 	display: flex;
-	gap: 24px;
 	justify-content: space-around;
 	list-style: none;
-	padding-inline-start: 0;
+	padding-inline: 0;
+	padding: 16px;
+}
+
+.icon a img:hover {
+	background: var(--BG-BTN-W);
+}
+
+.icon a:focus img {
+	background: rgba(41, 127, 229, 1);
 }
