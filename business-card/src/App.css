@@ -55,7 +55,7 @@
 }
 
 .card--wrapper {
-	max-width: 550px;
+	width: 550px;
 	margin: inherit;
 	border-radius: 10px;
 	padding: 44px 116px;
