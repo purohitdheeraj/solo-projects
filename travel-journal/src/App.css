@@ -3,7 +3,17 @@
 	margin: 0;
 }
 
+/* making base root font-size as 10px 
+	thus every rem unit is multiple of 10
+	1.6rem = 1.6 * 10 = 16px
+*/
+html {
+	font-size: 62.5%;
+}
+
 body {
+	/* making body base font-size 16px */
+	font-size: 1.6rem;
 	font-family: "Trebuchet MS", "Lucida Sans Unicode",
 		"Lucida Grande", "Lucida Sans", Arial, sans-serif;
 	background: #e5e5e5;
@@ -11,21 +21,21 @@ body {
 
 /* root is main outermost container */
 #root {
-	max-width: 1280px;
+	max-width: 128rem;
 	margin: 0 auto;
 	padding: 2rem;
 	text-align: center;
 }
 
 .App {
-	max-width: 570px;
+	max-width: 60rem;
 	margin: 0 auto;
 	border: 1px solid rgba(245, 245, 245, 1);
 }
 
 header {
 	background: rgba(245, 90, 90, 1);
-	padding: 16px 0;
+	padding: 1.6rem 0;
 	color: rgba(255, 255, 255, 1);
 	display: flex;
 	align-items: center;
@@ -33,18 +43,18 @@ header {
 }
 
 .header--logo {
-	margin-right: 8px;
+	margin-right: 1rem;
 }
 
 main {
 	background: rgba(255, 255, 255, 1);
-	padding: 40px 30px;
+	padding: 4rem 3rem;
 }
 
 .tile {
 	max-width: 100%;
 	display: flex;
-	padding: 18px 0;
+	padding: 1.8rem 0;
 	flex-wrap: wrap;
 	justify-content: center;
 }
@@ -55,28 +65,27 @@ main {
 
 .tile--image {
 	flex-grow: 1;
-	width: 145px;
+	width: 14rem;
 	max-width: 80%;
 	border-radius: 5px;
 }
 
 .tile--info {
 	flex-grow: 1;
-	margin: 20px 0;
 	text-align: left;
-	flex-basis: 300px;
+	flex-basis: 30rem;
 	max-width: 80%;
-	margin: 12px;
+	margin: 1.2rem;
 }
 
 .tile--info .location {
-	font-size: 14px;
+	font-size: 1.4rem;
 	display: flex;
 	align-items: center;
 }
 
 .location--icon {
-	height: 10px;
+	height: 1.4rem;
 	margin-right: 4px;
 }
 
@@ -88,22 +97,22 @@ looks better na ? 😃 */
 }
 
 .location--name {
-	margin-right: 8px;
+	margin-right: 1rem;
 }
 
 .tile--info h2 {
 	margin-top: 4px;
-	line-height: 30px;
+	line-height: 3rem;
 }
 
 .tile--info h4 {
-	margin-top: 8px;
-	font-size: 12px;
+	margin-top: 1rem;
+	font-size: 1.2rem;
 }
 
 .tile--info p {
-	font-size: 12px;
-	line-height: 16px;
-	margin-top: 10px;
+	font-size: 1.2rem;
+	line-height: 1.6rem;
+	margin-top: 1rem;
 }
 /* 🎉🎉🎉 century --- 100🏏 🎉🎉🎉 */
