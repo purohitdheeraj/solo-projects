@@ -46,6 +46,7 @@ main {
 	display: flex;
 	padding: 18px 0;
 	flex-wrap: wrap;
+	justify-content: center;
 }
 
 .tile:not(:last-child):nth-child(n-1) {
@@ -55,8 +56,8 @@ main {
 .tile--image {
 	flex-grow: 1;
 	width: 145px;
+	max-width: 80%;
 	border-radius: 5px;
-	margin-inline-end: 16px;
 }
 
 .tile--info {
@@ -64,7 +65,8 @@ main {
 	margin: 20px 0;
 	text-align: left;
 	flex-basis: 300px;
-	margin-inline-end: 16px;
+	max-width: 80%;
+	margin: 12px;
 }
 
 .tile--info .location {
