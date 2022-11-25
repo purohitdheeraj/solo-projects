@@ -2,8 +2,6 @@ import React from "react";
 import locateIcon from "../assets/locate-icon.svg";
 
 function Tile(props) {
-	console.log(props);
-
 	return (
 		<div className="tile">
 			<img

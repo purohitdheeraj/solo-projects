@@ -4,7 +4,7 @@ import travelData from "../data";
 
 function MainContent() {
 	const tiles = travelData.map((tile) => (
-		<Tile {...tile} />
+		<Tile key={tile.id} {...tile} />
 	));
 	return <main>{tiles}</main>;
 }
