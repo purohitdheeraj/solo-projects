@@ -6,6 +6,7 @@
 body {
 	font-family: "Trebuchet MS", "Lucida Sans Unicode",
 		"Lucida Grande", "Lucida Sans", Arial, sans-serif;
+	background: #e5e5e5;
 }
 
 /* root is main outermost container */
@@ -13,6 +14,94 @@ body {
 	max-width: 1280px;
 	margin: 0 auto;
 	padding: 2rem;
-	border: 1px solid;
 	text-align: center;
 }
+
+.App {
+	max-width: 570px;
+	margin: 0 auto;
+	/* width: 570px; */
+	border: 1px solid rgba(245, 245, 245, 1);
+}
+
+header {
+	background: rgba(245, 90, 90, 1);
+	padding: 16px 0;
+	color: rgba(255, 255, 255, 1);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.header--logo {
+	margin-right: 8px;
+}
+
+main {
+	background: rgba(255, 255, 255, 1);
+	padding: 40px 30px;
+}
+
+.tile {
+	max-width: 100%;
+	display: flex;
+	padding: 18px 0;
+	flex-wrap: wrap;
+}
+
+.tile:not(:last-child):nth-child(n-1) {
+	border-bottom: 2px solid rgba(245, 245, 245, 1);
+}
+
+.tile--image {
+	flex-grow: 1;
+	width: 145px;
+	border-radius: 5px;
+	margin-left: 20px;
+}
+
+.tile--info {
+	flex-grow: 1;
+	margin: 20px;
+	text-align: left;
+	flex-basis: 300px;
+}
+
+.tile--info .location {
+	font-size: 14px;
+	display: flex;
+	align-items: center;
+}
+
+.location--icon {
+	height: 10px;
+	margin-right: 4px;
+}
+
+/* intentionally moved link to right 
+looks better na ? 😃 */
+.location--link {
+	color: rgba(145, 142, 155, 1);
+	margin-left: auto;
+}
+
+.location--name {
+	margin-right: 8px;
+}
+
+.tile--info h2 {
+	margin-top: 4px;
+	line-height: 30px;
+}
+
+.tile--info h4 {
+	margin-top: 8px;
+	font-size: 12px;
+}
+
+.tile--info p {
+	font-size: 12px;
+	line-height: 16px;
+	margin-top: 10px;
+}
+/* 🎉🎉🎉 century --- 100🏏 🎉🎉🎉 */
